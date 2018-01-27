@@ -7,5 +7,7 @@ using System.Collections.Generic;
 public class ConfigBundle : ScriptableObject
 {
 	public List< CfgLevel > m_levels = new List< CfgLevel >();
+	public List< CfgTile > m_tile = new List< CfgTile >();
+	public List< CfgFrog > m_frog = new List< CfgFrog >();
 	public CfgGeneral m_general = new CfgGeneral();
 }

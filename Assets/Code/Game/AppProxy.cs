@@ -19,6 +19,8 @@ public class AppProxy : BaseAppProxy
 			public string[] m_assetBundles;
 		}
 		public Configuration.GameConfig m_gameConfig;
+
+		public bool m_editMode;
 	}
 
 	public Configuration m_appConfiguration;

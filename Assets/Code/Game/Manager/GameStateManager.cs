@@ -10,6 +10,8 @@ public class GameStateManager : IManager
 	private GameState _gameState = null;
 	public GameState GameState { get { return _gameState; } }
 
+	public LevelController _levelController = new LevelController();
+
 	public class InitData : ManagerInitData
 	{
 		public AppManager m_appManager;
@@ -28,7 +30,8 @@ public class GameStateManager : IManager
 		_ui = app.UIManager;
 		_prog = app.ProgressionManager;
 
-		_gameState = new GameState();
+		bool editMode = (app.AppProxyConfig as AppProxy.Configuration).m_editMode;
+		_gameState = new GameState( editMode );
 	}
 
 	public void Teardown()
@@ -72,9 +75,9 @@ public class GameStateManager : IManager
 		return false;
 	}
 
-	public void NextLevel()
+	public void LoadLevel( int i )
 	{
-		_gameState.m_currentLevel++;
+		_gameState.m_currentLevel=i;
 
 		CfgLevel lcfg = _prog.GetLevelConfigByIndex( _gameState.m_currentLevel);
 
@@ -82,8 +85,14 @@ public class GameStateManager : IManager
 		aSrc.clip = lcfg.m_music;
 		aSrc.Play ();
 
-		_gameState.OnStartLevel ();
+		_levelController.LoadLevel (_prog, _gameState, i);
+		//_gameState.OnStartLevel ( _levelController );
 
 		_ui.OnLevelChange();
+	}
+
+	public void NextLevel()
+	{
+		LoadLevel (_gameState.m_currentLevel + 1);
 	}
 }
