@@ -7,6 +7,8 @@ public class TileFrogSpawn : MonoBehaviour
 {
 	private TileHub _host;
 
+	public int m_frogType;
+
 	[SerializeField]
 	private MeshRenderer _editRenderer;
 
@@ -14,8 +16,6 @@ public class TileFrogSpawn : MonoBehaviour
 	{
 		_host = host;
 
-		if (!_host.State.EditMode) {
-			_editRenderer.enabled = false;
-		}
+		_editRenderer.enabled = !_host.State.EditMode;
 	}
 }

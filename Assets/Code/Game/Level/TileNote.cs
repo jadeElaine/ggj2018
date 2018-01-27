@@ -7,7 +7,8 @@ public class TileNote : MonoBehaviour
 {
 	private TileHub _host;
 
-	public void OnInit( bool editMode )
+	public void OnInit( TileHub host )
 	{
+		_host = host;
 	}
 }
