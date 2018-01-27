@@ -10,14 +10,6 @@ public interface IHub
 
 public class UIManager : IManager
 {
-	public static readonly float STADIUM_WIDTH = 900.0f;
-
-	public static readonly float CHARACTER_WIDTH = 158.0f;
-	public static readonly float CHARACTER_HEIGHT = 256.0f;
-
-	public static readonly float COACH_WIDTH = 256.0f;
-	public static readonly float COACH_HEIGHT = 256.0f;
-
 	private AppManager _app = null;
 	private List<IHub> _globalHubs = null;
 
@@ -79,7 +71,7 @@ public class UIManager : IManager
 		}
 	}
 
-	public void PlayEffect( string effectId )
+	public void PlayMovieEffect( string effectId )
 	{
 		for (int i = 0; i < _globalHubs.Count; ++i) 
 		{

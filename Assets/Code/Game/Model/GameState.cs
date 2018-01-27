@@ -8,7 +8,7 @@ public class GameState
 
 	public int m_currentLevel = -1;
 
-	public void ResetLevel()
+	public void OnStartLevel()
 	{
 		
 	}

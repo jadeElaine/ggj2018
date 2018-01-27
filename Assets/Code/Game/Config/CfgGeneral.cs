@@ -6,4 +6,5 @@ using System.Collections.Generic;
 public class CfgGeneral
 {
 	public int m_startLevel = 0;
+	public float m_uiAlertFadeTime = 3.0f;
 }

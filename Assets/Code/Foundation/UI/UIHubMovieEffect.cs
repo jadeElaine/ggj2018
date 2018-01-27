@@ -32,7 +32,7 @@ public class UIHubMovieEffect : MonoBehaviour, IHub
 			} 
 			else
 			{
-				float fadeTime = app.GameStateManager.GameState.m_generalConfig.m_uiTextFadeTime;
+				float fadeTime = app.GameStateManager.GameState.m_generalConfig.m_uiAlertFadeTime;
 				float frontFade = Mathf.Min (1.0f, _fallbackTicker * fadeTime);
 				float backFade = Mathf.Max (0.0f, _fallbackTicker * fadeTime - _fallbackImageDuration);
 				float fading = Mathf.Min (frontFade, backFade);
