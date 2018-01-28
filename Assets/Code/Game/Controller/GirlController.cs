@@ -34,17 +34,15 @@ public class GirlController {
 
 	public void UpdateFrame( float dt )
 	{
-		Vector3 oldPosition = _hub.transform.position;
-		Vector3 mv = new Vector3(Input.GetAxis(m_horizontalWalk), 0, Input.GetAxis(m_verticalWalk)).normalized + Vector3.up*1.0f;
-		_hub.GetComponent<CharacterController> ().Move( -mv * _hub.m_walkSpeed * dt );
-		Vector3 newPosition = _hub.transform.position;
+		Vector3 mv = new Vector3(Input.GetAxis(m_horizontalWalk), 0, Input.GetAxis(m_verticalWalk)).normalized;
+		Vector3 force = mv + Vector3.up*1.0f;
+		_hub.GetComponent<CharacterController> ().Move( -force * _hub.m_walkSpeed * dt );
 
-		if ((newPosition - oldPosition).sqrMagnitude > Mathf.Epsilon) {
-			Vector3 facing = (newPosition - oldPosition).normalized;
-			_hub.transform.rotation.SetLookRotation (facing, Vector3.up);
+		if (mv.sqrMagnitude > Mathf.Epsilon) {
+			_hub.transform.LookAt(_hub.transform.position - mv, Vector3.up);
 		}
 
-		if (Input.GetButton (m_interact)) {
+		if (Input.GetButtonDown (m_interact)) {
 			if (_heldFrog == null) {
 				// find frogs
 				FrogHub[] _allHubs = GameObject.FindObjectsOfType<FrogHub>();
@@ -62,11 +60,11 @@ public class GirlController {
 				}
 
 				if (pickup != null) {
+					_heldFrog = pickup;
 					_heldFrog.transform.SetParent (_hub.m_frogBone);
 					_heldFrog.transform.localPosition = Vector3.zero;
 					_heldFrog.transform.localRotation = Quaternion.identity;
 					_heldFrog.OnPickUp ();
-					_heldFrog = pickup;
 				}
 
 			} else {
