@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class FrogController {
 
-	private FrogHub _hub;
+//	private FrogHub _hub;
 
 	public FrogController( FrogHub hub )
 	{
-		_hub = hub;
+//		_hub = hub;
 	}
 
 	public void UpdateFrame( float dt )

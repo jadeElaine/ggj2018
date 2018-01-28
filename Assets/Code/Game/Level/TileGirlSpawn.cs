@@ -5,14 +5,14 @@ using UnityEngine;
 [RequireComponent (typeof(TileHub))]
 public class TileGirlSpawn : MonoBehaviour, ITileExtension
 {
-	private TileHub _host;
+//	private TileHub _host;
 
 	[SerializeField]
 	private Renderer _editRenderer;
 
 	public void OnInit( TileHub host )
 	{
-		_host = host;
+//		_host = host;
 
 		_editRenderer.enabled = false;
 

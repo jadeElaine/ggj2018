@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent (typeof(TileHub))]
 public class TileFrogSpawn : MonoBehaviour, ITileExtension
 {
-	private TileHub _host;
+//	private TileHub _host;
 
 	public int m_frogType;
 
@@ -14,7 +14,7 @@ public class TileFrogSpawn : MonoBehaviour, ITileExtension
 
 	public void OnInit( TileHub host )
 	{
-		_host = host;
+//		_host = host;
 
 		_editRenderer.enabled = false;
 

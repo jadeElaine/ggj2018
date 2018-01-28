@@ -12,10 +12,10 @@ public class GirlController {
 	public string m_interact = "PickUp";
 
 	private GirlHub _hub;
-	private float _initialZoom;
+//	private float _initialZoom;
 	private float _zoomLevel = 1.0f;
 	private Vector3 _camOffset = new Vector3 ( 0.0f, 2.0f, 1.25f );
-	private Vector3 _camSnapOval = new Vector3 ( 1.0f, 0.0f, 1.4f );
+	private Vector3 _camSnapOval = new Vector3 ( 1.0f, 0.0f, 1.65f );
 
 	private FrogHub _heldFrog = null;
 
@@ -28,7 +28,7 @@ public class GirlController {
 
 		ct.transform.parent.position = _hub.transform.position;
 		ct.transform.position = gt.position + _camOffset;
-		_initialZoom = (gt.position - ct.transform.position).magnitude;
+//		_initialZoom = (gt.position - ct.transform.position).magnitude;
 		ct.transform.LookAt( gt );
 	}
 
@@ -57,7 +57,7 @@ public class GirlController {
 
 				for (int i = 0; i < _allHubs.Length; ++i) {
 					float dist = (_allHubs [i].transform.position - _hub.transform.position).magnitude;
-					if (dist < _allHubs [i].m_pickupRange && _allHubs [i].m_canPickUp) {
+					if (dist < _allHubs [i]._pickupRange && _allHubs [i].m_canPickUp) {
 						if (pickup == null || dist < pickupDistance) {
 							pickup = _allHubs [i];
 							pickupDistance = dist;

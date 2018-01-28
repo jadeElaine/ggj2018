@@ -5,10 +5,10 @@ using UnityEngine;
 [RequireComponent (typeof(TileHub))]
 public class TileBeacon : MonoBehaviour, ITileExtension
 {
-	private TileHub _host;
+//	private TileHub _host;
 
 	public void OnInit( TileHub host )
 	{
-		_host = host;
+//		_host = host;
 	}
 }

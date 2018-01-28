@@ -11,7 +11,7 @@ public class FrogHub : MonoBehaviour {
 	public float[] m_screamDirections;
 
 	public bool m_canPickUp = true;
-	public float m_pickupRange = 1.0f;
+	public float _pickupRange = 0.45f;
 
 	public Transform m_screamBone;
 	public Transform m_lowerJawBone;
@@ -24,6 +24,8 @@ public class FrogHub : MonoBehaviour {
 	public AudioClip[] m_audioDrops;
 
 	public float m_animSpeed=8.0f;
+
+	public EffectHub m_spawnedEffect;
 
 
 	private AudioSource _source;
