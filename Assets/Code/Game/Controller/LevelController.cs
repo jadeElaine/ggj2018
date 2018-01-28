@@ -18,6 +18,7 @@ public class LevelController {
 		_activeTiles.Clear ();
 		foreach( TileHub th in _levelBuilder.gameObject.GetComponentsInChildren<TileHub>() )
 		{
+			th.Init (prog, state);
 			_activeTiles.Add( th );
 		}
 
