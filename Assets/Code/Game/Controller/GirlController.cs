@@ -15,7 +15,7 @@ public class GirlController {
 //	private float _initialZoom;
 	private float _zoomLevel = 1.0f;
 	private Vector3 _camOffset = new Vector3 ( 0.0f, 2.0f, 1.25f );
-	private Vector3 _camSnapOval = new Vector3 ( 1.0f, 0.0f, 1.65f );
+	private Vector3 _camSnapOval = new Vector3 ( 1.0f, 0.0f, 1.0f );
 
 	private AudioSource _source;
 
@@ -123,7 +123,7 @@ public class GirlController {
 
 		Vector3 spread = (gt.position - at.position);
 		spread.Scale( _camSnapOval );
-		float realZoom = 1.65f * _zoomLevel;
+		float realZoom = 1.0f * _zoomLevel;
 
 		if (spread.magnitude > realZoom) {
 

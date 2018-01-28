@@ -7,10 +7,14 @@ public class EffectHub : MonoBehaviour
 	public float m_lifespan = 1.5f;
 	public float m_maxOpacity=0.35f;
 	public Renderer m_renderer;
-	public Collider m_collider;
 	private float _lifeTicker=0.0f;
 
-	public List< Collider > _intersections = new List<Collider>();
+	public float m_sphereRadius=1.0f;
+	public float m_coneDistance =5.0f;
+	public float m_coneEndWidth = 1.0f;
+	public float m_coneStartWidth = 0.0f;
+
+	public FrogHub m_hostFrog = null;
 
 	public void OnTrigger()
 	{
@@ -20,12 +24,38 @@ public class EffectHub : MonoBehaviour
 
 	public void OnTransmit()
 	{
-		Debug.Log ("Other Colliders!" + _intersections.Count.ToString ());
+		FrogHub[] _allHubs = GameObject.FindObjectsOfType<FrogHub> ();
+		for (int i = 0; i < _allHubs.Length; ++i) {
+			Vector3 spread = _allHubs [i].transform.position - transform.position;
+			float dist = Vector3.Dot (spread, transform.forward);
+			float tangent = Vector3.Dot (spread, transform.right);
+
+			bool valid = false;
+			if (m_sphereRadius > 0 && spread.magnitude < m_sphereRadius) {
+				valid = true;
+			}
+			/*if (m_coneDistance > 0 && dist > 0 && dist < m_coneDistance) {
+				float ratio = dist / m_coneDistance;
+				float tanSpreadAt = m_coneStartWidth * (1.0f - ratio) + m_coneEndWidth * ratio;
+
+				if (Math.Abs(tangent) < tanSpreadAt) {
+					valid = true;
+				}
+			}*/
+
+			if (valid && _allHubs[i] != m_hostFrog) {
+				EchoOn (_allHubs [i]);
+			}
+		}
 	}
 
-	public void OnTriggerEnter( Collider Other )
+	public void EchoOn( FrogHub hub )
 	{
-		_intersections.Add (Other);
+		hub.OnScream ();
+
+		EffectHub eh = GameObject.Instantiate (hub.m_spawnedEffect, hub.transform.position, hub.transform.rotation) as EffectHub;
+		eh.m_hostFrog = hub;
+		eh.OnTrigger ();
 	}
 
 	void Update()
@@ -39,7 +69,7 @@ public class EffectHub : MonoBehaviour
 			Destroy (gameObject);
 		}
 
-		if (_lifeTicker > 0.75f * m_lifespan && _oldTicker <= 0.75f) {
+		if (_lifeTicker > 0.75f * m_lifespan && _oldTicker <= 0.75f * m_lifespan ) {
 			OnTransmit ();
 		}
 
