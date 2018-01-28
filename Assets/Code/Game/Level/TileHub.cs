@@ -21,11 +21,9 @@ public class TileHub : MonoBehaviour
 	{
 		_prog = prog;
 		_state = state;
-		Debug.Log ("Ah?");
 		ITileExtension tx = Util.GetComponentOfTypeOnGameObject<ITileExtension> (gameObject) as ITileExtension;
 		if( tx != null )
 		{
-			Debug.Log ("Yesh... " +name);
 			tx.OnInit( this );
 		}
 	}
