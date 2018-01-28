@@ -10,13 +10,22 @@ public class EffectHub : MonoBehaviour
 	public Collider m_collider;
 	private float _lifeTicker=0.0f;
 
+	public List< Collider > _intersections = new List<Collider>();
+
 	public void OnTrigger()
 	{
 		m_renderer.material = new Material (m_renderer.material);
+
 	}
 
 	public void OnTransmit()
 	{
+		Debug.Log ("Other Colliders!" + _intersections.Count.ToString ());
+	}
+
+	public void OnTriggerEnter( Collider Other )
+	{
+		_intersections.Add (Other);
 	}
 
 	void Update()

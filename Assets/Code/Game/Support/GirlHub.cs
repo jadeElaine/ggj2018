@@ -8,4 +8,5 @@ public class GirlHub : MonoBehaviour
 	public float m_animSpeed=8.0f;
 
 	public Transform m_frogBone;
+	public AudioClip m_noteAudio;
 }

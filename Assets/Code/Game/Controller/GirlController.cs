@@ -18,7 +18,6 @@ public class GirlController {
 	private Vector3 _camSnapOval = new Vector3 ( 1.0f, 0.0f, 1.65f );
 
 	private AudioSource _source;
-	public AudioClip m_noteAudio;
 
 	private FrogHub _heldFrog = null;
 
@@ -71,7 +70,7 @@ public class GirlController {
 					if (_source.isPlaying) {
 						_source.Stop ();
 					}
-					_source.clip = m_noteAudio;
+					_source.clip = _hub.m_noteAudio;
 					_source.Play ();
 				} else {
 
