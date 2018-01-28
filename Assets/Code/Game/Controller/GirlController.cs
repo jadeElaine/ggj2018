@@ -17,11 +17,15 @@ public class GirlController {
 	private Vector3 _camOffset = new Vector3 ( 0.0f, 2.0f, 1.25f );
 	private Vector3 _camSnapOval = new Vector3 ( 1.0f, 0.0f, 1.65f );
 
+	private AudioSource _source;
+	public AudioClip m_noteAudio;
+
 	private FrogHub _heldFrog = null;
 
 	public GirlController( GirlHub hub )
 	{
 		_hub = hub;
+		_source = _hub.GetComponent<AudioSource> ();
 
 		Transform ct = Camera.main.transform;
 		Transform gt = _hub.transform;
@@ -63,6 +67,12 @@ public class GirlController {
 				if (note != null) {
 					EffectHub eh = GameObject.Instantiate (note.m_spawnedEffect, note.transform.position, note.transform.rotation) as EffectHub;
 					eh.OnTrigger ();
+
+					if (_source.isPlaying) {
+						_source.Stop ();
+					}
+					_source.clip = m_noteAudio;
+					_source.Play ();
 				} else {
 
 					// find frogs
