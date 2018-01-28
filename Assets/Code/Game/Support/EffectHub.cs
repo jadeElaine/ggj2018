@@ -16,6 +16,8 @@ public class EffectHub : MonoBehaviour
 
 	public FrogHub m_hostFrog = null;
 
+	public AudioClip m_levelCompleteClip = null;
+
 	public void OnTrigger()
 	{
 		m_renderer.material = new Material (m_renderer.material);
@@ -24,27 +26,42 @@ public class EffectHub : MonoBehaviour
 
 	public void OnTransmit()
 	{
-		FrogHub[] _allHubs = GameObject.FindObjectsOfType<FrogHub> ();
-		for (int i = 0; i < _allHubs.Length; ++i) {
-			Vector3 spread = _allHubs [i].transform.position - transform.position;
-			float dist = Vector3.Dot (spread, transform.forward);
-			float tangent = Vector3.Dot (spread, transform.right);
+		FrogHub[] allHubs = GameObject.FindObjectsOfType<FrogHub> ();
+		for (int i = 0; i < allHubs.Length; ++i) {
+			TestTransmissionObj(allHubs[i]);
+		}
 
-			bool valid = false;
-			if (m_sphereRadius > 0 && spread.magnitude < m_sphereRadius) {
+		BeaconHub[] allBeacons = GameObject.FindObjectsOfType<BeaconHub> ();
+		for (int i = 0; i < allBeacons.Length; ++i) {
+			TestTransmissionObj(allBeacons[i]);
+		}
+	}
+
+	public void TestTransmissionObj(Component tob)
+	{
+		Vector3 spread = tob.transform.position - transform.position;
+		float dist = Vector3.Dot (spread, transform.forward);
+		float tangent = Vector3.Dot (spread, transform.right);
+
+		bool valid = false;
+		if (m_sphereRadius > 0 && spread.magnitude < m_sphereRadius) {
+			valid = true;
+		}
+		if (m_coneDistance > 0 && dist > 0 && dist < m_coneDistance) {
+			float ratio = dist / m_coneDistance;
+			float tanSpreadAt = m_coneStartWidth * (1.0f - ratio) + m_coneEndWidth * ratio;
+
+			if (Mathf.Abs(tangent) < tanSpreadAt) {
 				valid = true;
 			}
-			if (m_coneDistance > 0 && dist > 0 && dist < m_coneDistance) {
-				float ratio = dist / m_coneDistance;
-				float tanSpreadAt = m_coneStartWidth * (1.0f - ratio) + m_coneEndWidth * ratio;
+		}
 
-				if (Mathf.Abs(tangent) < tanSpreadAt) {
-					valid = true;
-				}
+		if (valid && tob != m_hostFrog) {
+			if (tob is FrogHub) {
+				EchoOn (tob as FrogHub);
 			}
-
-			if (valid && _allHubs[i] != m_hostFrog) {
-				EchoOn (_allHubs [i]);
+			if (tob is BeaconHub) {
+				(tob as BeaconHub).OnTrigger (m_levelCompleteClip);
 			}
 		}
 	}
