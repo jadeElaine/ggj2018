@@ -50,30 +50,45 @@ public class GirlController {
 
 		if (Input.GetButtonDown (m_interact)) {
 			if (_heldFrog == null) {
-				// find frogs
-				FrogHub[] _allHubs = GameObject.FindObjectsOfType<FrogHub>();
-				FrogHub pickup = null;
-				float pickupDistance = 0.0f;
-
-				for (int i = 0; i < _allHubs.Length; ++i) {
-					float dist = (_allHubs [i].transform.position - _hub.transform.position).magnitude;
-					if (dist < _allHubs [i]._pickupRange && _allHubs [i].m_canPickUp) {
-						if (pickup == null || dist < pickupDistance) {
-							pickup = _allHubs [i];
-							pickupDistance = dist;
-						}
+				// find note
+				NoteHub[] _allNotes = GameObject.FindObjectsOfType<NoteHub> ();
+				NoteHub note = null;
+				for (int i = 0; i < _allNotes.Length; ++i) {
+					float dist = (_allNotes [i].transform.position - _hub.transform.position).magnitude;
+					if (dist < _allNotes [i].m_triggerRange) {
+						note = _allNotes [i];
 					}
 				}
 
-				if (pickup != null) {
-					_heldFrog = pickup;
-					_heldFrog.transform.SetParent (_hub.m_frogBone);
-					_heldFrog.transform.localPosition = Vector3.zero;
-					_heldFrog.transform.localRotation = Quaternion.identity;
-					_heldFrog.OnPickUp ();
-					anim.SetBool("hasFrog", true);
-				}
+				if (note != null) {
+					EffectHub eh = GameObject.Instantiate (note.m_spawnedEffect, note.transform.position, note.transform.rotation) as EffectHub;
+					eh.OnTrigger ();
+				} else {
 
+					// find frogs
+					FrogHub[] _allHubs = GameObject.FindObjectsOfType<FrogHub> ();
+					FrogHub pickup = null;
+					float pickupDistance = 0.0f;
+
+					for (int i = 0; i < _allHubs.Length; ++i) {
+						float dist = (_allHubs [i].transform.position - _hub.transform.position).magnitude;
+						if (dist < _allHubs [i]._pickupRange && _allHubs [i].m_canPickUp) {
+							if (pickup == null || dist < pickupDistance) {
+								pickup = _allHubs [i];
+								pickupDistance = dist;
+							}
+						}
+					}
+
+					if (pickup != null) {
+						_heldFrog = pickup;
+						_heldFrog.transform.SetParent (_hub.m_frogBone);
+						_heldFrog.transform.localPosition = Vector3.zero;
+						_heldFrog.transform.localRotation = Quaternion.identity;
+						_heldFrog.OnPickUp ();
+						anim.SetBool ("hasFrog", true);
+					}
+				}
 			} else {
 				Transform ground = _hub.transform.parent;
 				_heldFrog.transform.SetParent (ground);
@@ -81,7 +96,7 @@ public class GirlController {
 				_heldFrog.transform.rotation = _hub.transform.rotation;
 				_heldFrog.OnDrop ();
 				_heldFrog = null;
-				anim.SetBool("hasFrog", false);
+				anim.SetBool ("hasFrog", false);
 			}
 		}
 	}
