@@ -23,6 +23,9 @@ public class FrogHub : MonoBehaviour {
 	public AudioClip[] m_audioPickups;
 	public AudioClip[] m_audioDrops;
 
+	public float m_animSpeed=8.0f;
+
+
 	private AudioSource _source;
 
 	void Start()

@@ -38,8 +38,14 @@ public class GirlController {
 		Vector3 force = mv + Vector3.up*1.0f;
 		_hub.GetComponent<CharacterController> ().Move( -force * _hub.m_walkSpeed * dt );
 
+		Animator anim = _hub.GetComponent<Animator> ();
+		anim.speed = _hub.m_animSpeed;
+
 		if (mv.sqrMagnitude > Mathf.Epsilon) {
-			_hub.transform.LookAt(_hub.transform.position - mv, Vector3.up);
+			_hub.transform.LookAt (_hub.transform.position - mv, Vector3.up);
+			anim.SetFloat ("walkSpeed", 1.0f);
+		} else {
+			anim.SetFloat ("walkSpeed", 0.0f);
 		}
 
 		if (Input.GetButtonDown (m_interact)) {
@@ -65,6 +71,7 @@ public class GirlController {
 					_heldFrog.transform.localPosition = Vector3.zero;
 					_heldFrog.transform.localRotation = Quaternion.identity;
 					_heldFrog.OnPickUp ();
+					anim.SetBool("hasFrog", true);
 				}
 
 			} else {
@@ -74,6 +81,7 @@ public class GirlController {
 				_heldFrog.transform.rotation = _hub.transform.rotation;
 				_heldFrog.OnDrop ();
 				_heldFrog = null;
+				anim.SetBool("hasFrog", false);
 			}
 		}
 	}
