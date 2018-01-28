@@ -34,14 +34,14 @@ public class EffectHub : MonoBehaviour
 			if (m_sphereRadius > 0 && spread.magnitude < m_sphereRadius) {
 				valid = true;
 			}
-			/*if (m_coneDistance > 0 && dist > 0 && dist < m_coneDistance) {
+			if (m_coneDistance > 0 && dist > 0 && dist < m_coneDistance) {
 				float ratio = dist / m_coneDistance;
 				float tanSpreadAt = m_coneStartWidth * (1.0f - ratio) + m_coneEndWidth * ratio;
 
-				if (Math.Abs(tangent) < tanSpreadAt) {
+				if (Mathf.Abs(tangent) < tanSpreadAt) {
 					valid = true;
 				}
-			}*/
+			}
 
 			if (valid && _allHubs[i] != m_hostFrog) {
 				EchoOn (_allHubs [i]);

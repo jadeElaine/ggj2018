@@ -13,7 +13,7 @@ public class GirlController {
 
 	private GirlHub _hub;
 //	private float _initialZoom;
-	private float _zoomLevel = 1.0f;
+	private float _zoomLevel = 2.0f;
 	private Vector3 _camOffset = new Vector3 ( 0.0f, 2.0f, 1.25f );
 	private Vector3 _camSnapOval = new Vector3 ( 1.0f, 0.0f, 1.0f );
 
