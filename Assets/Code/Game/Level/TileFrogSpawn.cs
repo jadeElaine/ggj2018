@@ -16,7 +16,7 @@ public class TileFrogSpawn : MonoBehaviour
 	{
 		_host = host;
 
-		_editRenderer.enabled = !_host.State.EditMode;
+		_editRenderer.enabled = false;
 
 		CfgFrog fc = host.Prog.GetFrogConfigByIndex (m_frogType);
 		FrogHub fh = GameObject.Instantiate (fc.m_prefab, transform) as FrogHub;

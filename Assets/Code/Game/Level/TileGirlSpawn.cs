@@ -14,7 +14,7 @@ public class TileGirlSpawn : MonoBehaviour
 	{
 		_host = host;
 
-		_editRenderer.enabled = !_host.State.EditMode;
+		_editRenderer.enabled = false;
 
 		if (host.State.m_girlController != null) {
 			Debug.LogError ("2 GIRLS???? FREAK OUT!");

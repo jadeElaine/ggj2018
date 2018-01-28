@@ -7,6 +7,7 @@ public class FrogHub : MonoBehaviour {
 	public float m_screamDelay = 0.75f;
 	public float m_screamDistance = 5.0f;
 	public float m_screamDuration = 1.0f;
+	public float m_screamReload = 0.25f;
 	public float[] m_screamDirections;
 
 	public bool m_canPickUp = true;
