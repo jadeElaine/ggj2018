@@ -30,6 +30,7 @@ ModelImporter:
     100044: R_wrist
     100046: root
     100048: waist
+    100050: frogMount
     400000: chest
     400002: //RootNode
     400004: head
@@ -55,6 +56,7 @@ ModelImporter:
     400044: R_wrist
     400046: root
     400048: waist
+    400050: frogMount
     4300000: pCube6
     7400000: Take 001
     9500000: //RootNode
