@@ -39,6 +39,14 @@ ModelImporter:
     100062: transform7
     100064: transform8
     100066: transform9
+    100068: L_eyebrow
+    100070: lowerJaw_1
+    100072: lowerJaw_2
+    100074: pPlane3
+    100076: R_eyebrow
+    100078: root
+    100080: upperJaw_1
+    100082: upperJaw_2
     400000: //RootNode
     400002: pCube1
     400004: pCube2
@@ -73,9 +81,20 @@ ModelImporter:
     400062: transform7
     400064: transform8
     400066: transform9
+    400068: L_eyebrow
+    400070: lowerJaw_1
+    400072: lowerJaw_2
+    400074: pPlane3
+    400076: R_eyebrow
+    400078: root
+    400080: upperJaw_1
+    400082: upperJaw_2
     2300000: polySurface9
+    2300002: pPlane3
     3300000: polySurface9
+    3300002: pPlane3
     4300000: polySurface9
+    4300002: pPlane3
   materials:
     importMaterials: 1
     materialName: 0
