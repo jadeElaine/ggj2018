@@ -5,7 +5,6 @@ using UnityEngine;
 public class LevelController {
 
 	private LevelBuilder _levelBuilder = null;
-	private List< TileHub > _activeTiles = new List<TileHub>();
 
 	private ProgressionManager _prog;
 	private GameState _state;
@@ -14,11 +13,12 @@ public class LevelController {
 	public bool LoadLevel( ProgressionManager prog, GameState state, int index )
 	{
 		if (_levelBuilder != null) {
-			GameObject.Destroy (_levelBuilder);
+			GameObject.Destroy (_levelBuilder.gameObject);
 		}
 
-		_activeTiles.Clear ();
-
+		state.m_girlController = null;
+		state.m_activeFrogs.Clear ();
+			
 		_prog = prog;
 		_state = state;
 		_index = index;
@@ -38,7 +38,6 @@ public class LevelController {
 		foreach( TileHub th in _levelBuilder.gameObject.GetComponentsInChildren<TileHub>() )
 		{
 			th.Init (_prog, _state);
-			_activeTiles.Add( th );
 		}
 
 	}
