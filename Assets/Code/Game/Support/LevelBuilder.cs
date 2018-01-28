@@ -11,6 +11,7 @@ public class LevelBuilder : MonoBehaviour {
 	public int m_width=11;
 	public int m_height=11;
 
+	[SerializeField]
 	private List<TileHub> _tiles = new List<TileHub>();
 
 	public TileHub GetTile( int x, int y )
