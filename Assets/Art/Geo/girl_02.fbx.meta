@@ -59,6 +59,14 @@ ModelImporter:
     400050: waist
     4300000: pCube6
     7400000: Take 001
+    7400002: StartWalk
+    7400004: WalkCycle
+    7400006: StopWalk
+    7400008: PickUp
+    7400010: StartCarry
+    7400012: CarryCycle
+    7400014: StopCarry
+    7400016: PutDown
     9500000: //RootNode
     13700000: pCube6
   materials:
@@ -75,13 +83,653 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: StartWalk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube6
+        weight: 0
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_foot
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_foot
+        weight: 1
+      - path: root/waist
+        weight: 1
+      - path: root/waist/chest
+        weight: 1
+      - path: root/waist/chest/L_shoulder
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist/L_hand
+        weight: 0
+      - path: root/waist/chest/neck
+        weight: 1
+      - path: root/waist/chest/neck/head
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail/L_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/neck/head/R_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/R_pigtail/R_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/R_shoulder
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist/R_hand
+        weight: 0
+      - path: root/waist/frogMount
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WalkCycle
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube6
+        weight: 0
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_foot
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_foot
+        weight: 1
+      - path: root/waist
+        weight: 1
+      - path: root/waist/chest
+        weight: 1
+      - path: root/waist/chest/L_shoulder
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist/L_hand
+        weight: 0
+      - path: root/waist/chest/neck
+        weight: 1
+      - path: root/waist/chest/neck/head
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail/L_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/neck/head/R_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/R_pigtail/R_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/R_shoulder
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist/R_hand
+        weight: 0
+      - path: root/waist/frogMount
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: StopWalk
+      takeName: Take 001
+      firstFrame: 150
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube6
+        weight: 0
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_foot
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_foot
+        weight: 1
+      - path: root/waist
+        weight: 1
+      - path: root/waist/chest
+        weight: 1
+      - path: root/waist/chest/L_shoulder
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist/L_hand
+        weight: 0
+      - path: root/waist/chest/neck
+        weight: 1
+      - path: root/waist/chest/neck/head
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail/L_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/neck/head/R_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/R_pigtail/R_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/R_shoulder
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist/R_hand
+        weight: 0
+      - path: root/waist/frogMount
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: PickUp
+      takeName: Take 001
+      firstFrame: 180
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube6
+        weight: 0
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_foot
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_foot
+        weight: 1
+      - path: root/waist
+        weight: 1
+      - path: root/waist/chest
+        weight: 1
+      - path: root/waist/chest/L_shoulder
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist/L_hand
+        weight: 0
+      - path: root/waist/chest/neck
+        weight: 1
+      - path: root/waist/chest/neck/head
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail/L_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/neck/head/R_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/R_pigtail/R_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/R_shoulder
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist/R_hand
+        weight: 0
+      - path: root/waist/frogMount
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: StartCarry
+      takeName: Take 001
+      firstFrame: 240
+      lastFrame: 270
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube6
+        weight: 0
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_foot
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_foot
+        weight: 1
+      - path: root/waist
+        weight: 1
+      - path: root/waist/chest
+        weight: 1
+      - path: root/waist/chest/L_shoulder
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist/L_hand
+        weight: 0
+      - path: root/waist/chest/neck
+        weight: 1
+      - path: root/waist/chest/neck/head
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail/L_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/neck/head/R_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/R_pigtail/R_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/R_shoulder
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist/R_hand
+        weight: 0
+      - path: root/waist/frogMount
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CarryCycle
+      takeName: Take 001
+      firstFrame: 270
+      lastFrame: 390
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube6
+        weight: 0
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_foot
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_foot
+        weight: 1
+      - path: root/waist
+        weight: 1
+      - path: root/waist/chest
+        weight: 1
+      - path: root/waist/chest/L_shoulder
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist/L_hand
+        weight: 0
+      - path: root/waist/chest/neck
+        weight: 1
+      - path: root/waist/chest/neck/head
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail/L_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/neck/head/R_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/R_pigtail/R_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/R_shoulder
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist/R_hand
+        weight: 0
+      - path: root/waist/frogMount
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: StopCarry
+      takeName: Take 001
+      firstFrame: 390
+      lastFrame: 420
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube6
+        weight: 0
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_foot
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_foot
+        weight: 1
+      - path: root/waist
+        weight: 1
+      - path: root/waist/chest
+        weight: 1
+      - path: root/waist/chest/L_shoulder
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist/L_hand
+        weight: 0
+      - path: root/waist/chest/neck
+        weight: 1
+      - path: root/waist/chest/neck/head
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail/L_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/neck/head/R_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/R_pigtail/R_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/R_shoulder
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist/R_hand
+        weight: 0
+      - path: root/waist/frogMount
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: PutDown
+      takeName: Take 001
+      firstFrame: 420
+      lastFrame: 480
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube6
+        weight: 0
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_foot
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_foot
+        weight: 1
+      - path: root/waist
+        weight: 1
+      - path: root/waist/chest
+        weight: 1
+      - path: root/waist/chest/L_shoulder
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist
+        weight: 1
+      - path: root/waist/chest/L_shoulder/L_elbow/L_wrist/L_hand
+        weight: 0
+      - path: root/waist/chest/neck
+        weight: 1
+      - path: root/waist/chest/neck/head
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/L_pigtail/L_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/neck/head/R_pigtail
+        weight: 1
+      - path: root/waist/chest/neck/head/R_pigtail/R_pigtail_tip
+        weight: 0
+      - path: root/waist/chest/R_shoulder
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist
+        weight: 1
+      - path: root/waist/chest/R_shoulder/R_elbow/R_wrist/R_hand
+        weight: 0
+      - path: root/waist/frogMount
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -108,8 +756,290 @@ ModelImporter:
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
-    human: []
-    skeleton: []
+    human:
+    - boneName: root
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_leg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_leg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_knee
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_knee
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: waist
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: chest
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_shoulder
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_shoulder
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_elbow
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_elbow
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_wrist
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_wrist
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_pigtail
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_pigtail
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: girl_02(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCube6
+      parentName: girl_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: root
+      parentName: girl_02(Clone)
+      position: {x: -0, y: 0.009991924, z: 0.000040783365}
+      rotation: {x: 0.49453664, y: -0.5054043, z: -0.49453664, w: 0.5054043}
+      scale: {x: 1, y: 1, z: 1}
+    - name: waist
+      parentName: root
+      position: {x: -0.0020631475, y: 0.0000040580308, z: -4.587865e-19}
+      rotation: {x: -0, y: -0, z: -0.010867656, w: 0.999941}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000004}
+    - name: frogMount
+      parentName: waist
+      position: {x: -0.00081375265, y: 0.006893229, z: 1.0045985e-18}
+      rotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: chest
+      parentName: waist
+      position: {x: -0.0030832123, y: -3.5407206e-18, z: -6.9560844e-19}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: neck
+      parentName: chest
+      position: {x: -0.0007748839, y: -8.898665e-19, z: -1.7482279e-19}
+      rotation: {x: -0.7071068, y: -0.000000005122274, z: 0.000000005122274, w: 0.7071068}
+      scale: {x: 1.0000008, y: 1.0000011, z: 1.0000004}
+    - name: head
+      parentName: neck
+      position: {x: -0.003541868, y: 7.8499135e-19, z: 4.704743e-19}
+      rotation: {x: 0.000000029802322, y: 0.00000003236346, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: L_pigtail
+      parentName: head
+      position: {x: -0.003637443, y: 0.00041299494, z: -0.00087046355}
+      rotation: {x: -0.00000006279257, y: -0.000000024462324, z: -0.080406986, w: 0.99676216}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_pigtail_tip
+      parentName: L_pigtail
+      position: {x: -0.0024089243, y: 2.5959978e-19, z: -0.00041195366}
+      rotation: {x: 0.00000006279257, y: 0.000000024462324, z: 0.080406986, w: 0.99676216}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: R_pigtail
+      parentName: head
+      position: {x: 0.0036374398, y: 0.0004129636, z: -0.00087046396}
+      rotation: {x: 0.9967621, y: 0.080407076, z: 0.000000002172113, w: 0.00000004005963}
+      scale: {x: 1, y: 0.9999995, z: 1}
+    - name: R_pigtail_tip
+      parentName: R_pigtail
+      position: {x: 0.0024089392, y: -0.0000000639486, z: 0.000411956}
+      rotation: {x: 0.00000004142791, y: 0.0000000033889045, z: 0.080407076, w: 0.9967621}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: L_shoulder
+      parentName: chest
+      position: {x: 0.00019777556, y: 1.8149145e-18, z: 0.0016246816}
+      rotation: {x: -0.49734765, y: 0.50263834, z: 0.5026384, w: 0.49734762}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: L_elbow
+      parentName: L_shoulder
+      position: {x: -0.0021984335, y: -0.000003145481, z: 2.2619603e-19}
+      rotation: {x: 0.000000014901161, y: 0.000000029802322, z: -0.008214593, w: 0.99996626}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: L_wrist
+      parentName: L_elbow
+      position: {x: -0.0023853066, y: -0.00000074501133, z: -9.6941154e-20}
+      rotation: {x: 0.00000008931652, y: 7.7742257e-10, z: 0.00292391, w: 0.99999577}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1}
+    - name: L_hand
+      parentName: L_wrist
+      position: {x: -0.0013446341, y: -0.000042133874, z: -2.795432e-18}
+      rotation: {x: -0, y: -0, z: -6.943667e-17, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: R_shoulder
+      parentName: chest
+      position: {x: 0.00019778454, y: 1.8149215e-18, z: -0.00162468}
+      rotation: {x: 0.50263834, y: 0.49734762, z: -0.49734762, w: 0.50263846}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000008}
+    - name: R_elbow
+      parentName: R_shoulder
+      position: {x: 0.0021984363, y: 0.000003137602, z: -5.534563e-19}
+      rotation: {x: 0.000000029802322, y: 0.000000074505806, z: -0.008214638, w: 0.9999663}
+      scale: {x: 1.0000001, y: 1.0000012, z: 1.0000011}
+    - name: R_wrist
+      parentName: R_elbow
+      position: {x: 0.0023853064, y: 0.00000074893455, z: 8.520628e-19}
+      rotation: {x: 0.00000008930792, y: -0.0000000140805465, z: 0.0029239256, w: 0.99999577}
+      scale: {x: 1, y: 0.99999964, z: 0.99999934}
+    - name: R_hand
+      parentName: R_wrist
+      position: {x: 0.0013446299, y: 0.000042099997, z: 1.906939e-18}
+      rotation: {x: -0, y: -0, z: 1.2575042e-15, w: 1}
+      scale: {x: 0.9999997, y: 1.0000001, z: 1}
+    - name: L_leg
+      parentName: root
+      position: {x: 0.00022408168, y: -0.000045664336, z: 0.0017228613}
+      rotation: {x: -0.01393345, y: 0.7069695, z: 0.7064997, w: 0.029295474}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000001}
+    - name: L_knee
+      parentName: L_leg
+      position: {x: -0.0048364955, y: 5.20417e-19, z: 0}
+      rotation: {x: 0.000000021027518, y: 0.000000017695129, z: 0.027086455, w: 0.99963313}
+      scale: {x: 1.0000005, y: 1.0000005, z: 0.99999994}
+    - name: L_foot
+      parentName: L_knee
+      position: {x: -0.0047126315, y: -3.4106925e-18, z: -0.00013006784}
+      rotation: {x: 4.0791015e-10, y: 0.0000000024194948, z: -0.7046387, w: 0.70956624}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: R_leg
+      parentName: root
+      position: {x: 0.00022408446, y: -0.000045664397, z: -0.00172286}
+      rotation: {x: 0.7069695, y: 0.01393345, z: -0.029295474, w: 0.7064997}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000002}
+    - name: R_knee
+      parentName: R_leg
+      position: {x: 0.004836489, y: -0.0000000018333018, z: -5.3863627e-18}
+      rotation: {x: 0.000000029802319, y: 0.000000014901159, z: 0.027086455, w: 0.9996331}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000011}
+    - name: R_foot
+      parentName: R_knee
+      position: {x: 0.0047126343, y: -1.3601244e-10, z: 0.00013006784}
+      rotation: {x: -0.00000001086743, y: -0.0000000079987394, z: -0.7046388, w: 0.70956624}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000001}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -120,10 +1050,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
