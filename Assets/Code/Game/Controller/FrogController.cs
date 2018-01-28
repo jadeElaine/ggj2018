@@ -11,4 +11,7 @@ public class FrogController {
 		_hub = hub;
 	}
 
+	public void UpdateFrame( float dt )
+	{
+	}
 }

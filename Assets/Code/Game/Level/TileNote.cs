@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent (typeof(TileHub))]
-public class TileNote : MonoBehaviour 
+public class TileNote : MonoBehaviour, ITileExtension
 {
 	private TileHub _host;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent (typeof(TileHub))]
-public class TileFrogSpawn : MonoBehaviour
+public class TileFrogSpawn : MonoBehaviour, ITileExtension
 {
 	private TileHub _host;
 

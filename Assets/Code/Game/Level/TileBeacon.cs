@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent (typeof(TileHub))]
-public class TileBeacon : MonoBehaviour
+public class TileBeacon : MonoBehaviour, ITileExtension
 {
 	private TileHub _host;
 

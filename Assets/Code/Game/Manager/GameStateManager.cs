@@ -44,6 +44,13 @@ public class GameStateManager : IManager
 
 	public void UpdateFrame( float dt )
 	{
+		if (_gameState.m_girlController != null) {
+			_gameState.m_girlController.UpdateFrame (dt);
+		}
+		for (int i = 0; i < _gameState.m_activeFrogs.Count; ++i) {
+			_gameState.m_activeFrogs [i].UpdateFrame (dt);
+		}
+
 		if( _gameState.m_currentLevel >= 0 && _gameState.m_currentLevel < _prog.GetLevelCount() )
 		{
 			//CfgLevel lcfg = _prog.GetLevelConfigByIndex(_gameState.m_currentLevel);
@@ -56,6 +63,9 @@ public class GameStateManager : IManager
 	}
 	public void UpdateFrameLate( float dt )
 	{
+		if (_gameState.m_girlController != null) {
+			_gameState.m_girlController.UpdateFrameLate (dt);
+		}
 	}
 	public void UpdateFixed( float dt )
 	{

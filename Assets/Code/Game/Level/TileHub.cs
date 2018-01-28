@@ -21,10 +21,10 @@ public class TileHub : MonoBehaviour
 	{
 		_prog = prog;
 		_state = state;
-
-		ITileExtension[] its = GetComponents<ITileExtension> ();
-		for (int i = 0; i < its.Length; ++i) {
-			its[i].OnInit( this );
+		ITileExtension tx = Util.GetComponentOfTypeOnGameObject<ITileExtension> (gameObject) as ITileExtension;
+		if( tx != null )
+		{
+			tx.OnInit( this );
 		}
 	}
 }
