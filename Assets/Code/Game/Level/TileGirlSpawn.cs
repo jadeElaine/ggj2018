@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent (typeof(TileHub))]
-public class TileGirlSpawn : MonoBehaviour
+public class TileGirlSpawn : MonoBehaviour, ITileExtension
 {
 	private TileHub _host;
 
 	[SerializeField]
-	private MeshRenderer _editRenderer;
+	private Renderer _editRenderer;
 
 	public void OnInit( TileHub host )
 	{
